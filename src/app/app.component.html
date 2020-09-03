@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg navbar-default">
+  <a class="navbar-brand text-white" href="./index.html"
+    ><img
+      src="https://image.flaticon.com/icons/svg/2994/2994305.svg"
+      alt=""
+      width="50"
+    />
+    Khelpix
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbar-default"
+    aria-controls="navbar-default"
+    aria-expanded="true"
+    aria-label="Toggle navigation"
+  >
+    <span class="icon-bar top-bar mt-0"></span>
+    <span class="icon-bar middle-bar"></span>
+    <span class="icon-bar bottom-bar"></span>
+  </button>
+  <div class="navbar-collapse collapse show" id="navbar-default">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar-default"
+      aria-controls="navbar-default"
+      aria-expanded="true"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-times"></i>
+    </button>
+    <ul class="navbar-nav ml-auto mr-lg-3">
+      <li class="nav-item dropdown disabled">
+        <a class="nav-link d-lg-none" href="#!">
+          Menu
+        </a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle text-white"
+          href="#"
+          id="menu-1"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          data-display="static"
+        >
+          Homepages
+        </a>
+        <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="menu-1">
+          <li class="">
+            <a class="dropdown-item" routerLink="/products">
+              <h4 class="mb-0 h5">Productos</h4>
+              <p class="text-muted mb-0 font-12">
+                Administra tus productos
+              </p>
+            </a>
+          </li>
+          <li class="">
+            <a class="dropdown-item" routerLink="/users">
+              <h4 class="mb-0 h5">Usuarios</h4>
+              <p class="text-muted mb-0 font-12">
+                Agrega, edita y elimina usuarios de tu empresa
+              </p>
+            </a>
+          </li>
+          <li class="">
+            <a class="dropdown-item" href="./pages/life-coach.html">
+              <h4 class="mb-0 h5">Life Coach</h4>
+              <p class="text-muted mb-0 font-12">
+                LifeCoach layout design.
+              </p>
+            </a>
+          </li>
+          <li class="">
+            <a class="dropdown-item" href="./pages/ceo-coach.html">
+              <h4 class="mb-0 h5">CEO Coaching</h4>
+              <p class="text-muted mb-0 font-12">
+                Excellent in CEO Coaching
+              </p>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white" href="">Salir </a>
+      </li>
+    </ul>
+    <div class="header-btn">
+      <a href="#" class="btn btn-primary btn-sm">Sign up</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>

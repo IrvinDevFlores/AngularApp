@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            {{ ComponentMessage }}
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              [(ngModel)]="selectedUser.UserName"
+              placeholder="Ingrese un usuario"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              [(ngModel)]="selectedUser.Password"
+              placeholder="Ingrese un password"
+              class="form-control"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              [(ngModel)]="selectedUser.Country"
+              placeholder="Ingrese un pais"
+              class="form-control"
+            />
+          </div>
+
+          <button (click)="addUser()" class="btn btn-success">
+            Agregar
+          </button>
+
+          <button
+            class="btn btn-danger"
+            *ngIf="selectedUser.UserId !== 0"
+            (click)="Delete()"
+          >
+            Eliminar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mt-4">
+      <ul class="list-group">
+        <li
+          class="list-group-item list-group-item-action"
+          *ngFor="let user of Users"
+          (click)="handleEdit(user)"
+          [class.active]="user.UserId == selectedUser.UserId"
+        >
+          <span class="badge badge-primary">
+            {{ user.UserId }}
+          </span>
+
+          <span class="badge badge-danger lead">
+            {{ user.UserName }}
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

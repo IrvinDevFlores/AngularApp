@@ -1,0 +1,31 @@
+<router-outlet></router-outlet>
+
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-6 mt-4'>
+            <form [formGroup] = 'adminProductsForm'>
+                <span class='text-white'> Product Name:</span>
+                <input
+                  [class.is-invalid] = "adminProductsForm.get('productName').touched && adminProductsForm.get('productName').invalid"
+                            type='text'
+                            class='form-control'
+                            formControlName = 'productName'>
+
+                <span class='text-white'> Product Price:</span>
+                <input type='text'
+                         class='form-control'
+                         [class.is-invalid] = "adminProductsForm.get('productPrice').touched && adminProductsForm.get('productPrice').invalid"
+                        formControlName = 'productPrice'>
+
+                <button class='btn btn-primary' type='submit'>Guardar</button>
+
+                <a routerLink='/product' class='text-white'>Productos</a>
+
+            </form>
+
+            <span>{{adminProductsForm.value | json}}</span>
+
+        </div>
+    </div>
+
+    <router-outlet></router-outlet>
